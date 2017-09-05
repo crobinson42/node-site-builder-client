@@ -12,7 +12,7 @@ const DashboardRoutes = () => (
   <AuthenticatedRoutes>
     <DashboardPageWrapper>
       <Switch>
-        <Route exact path="/dashboard" component={Dashboard} />
+        <Route exact path="/admin/dashboard" component={Dashboard} />
       </Switch>
     </DashboardPageWrapper>
   </AuthenticatedRoutes>

@@ -1,9 +1,8 @@
-import { CLEAR_TOKEN, LOGOUT } from './constants'
-import { SUBMIT_LOGIN_FORM } from 'containers/Login/constants'
+import { CLEAR_TOKEN, LOGOUT, SUBMIT_LOGIN_FORM } from './constants'
 
 const initialState = {}
 
-export default function user(state = initialState, action) {
+export default function auth(state = initialState, action) {
   switch (action.type) {
     case CLEAR_TOKEN:
       return {

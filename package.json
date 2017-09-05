@@ -1,7 +1,6 @@
 {
   "name": "node-site-builder-client",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "axios": "^0.16.2",
     "history": "^4.7.2",
@@ -16,7 +15,7 @@
     "react-scripts": "1.0.13",
     "redux": "^3.7.2",
     "redux-axios-middleware": "^4.0.0",
-    "redux-form": "^7.0.3",
+    "redux-form": "^7.0.4",
     "redux-thunk": "^2.2.0"
   },
   "scripts": {
@@ -26,7 +25,12 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "eslint": "^4.6.1",
     "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.0.1",
+    "eslint-plugin-react": "^7.3.0",
+    "prettier": "^1.6.1",
     "stylelint": "^8.1.1",
     "stylelint-config-standard": "^17.0.0"
   }

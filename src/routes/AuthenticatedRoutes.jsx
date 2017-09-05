@@ -6,8 +6,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import { connect } from 'react-redux'
-import { Redirect, withRouter } from 'react-router-dom'
+// import { connect } from 'react-redux'
+import { Redirect } from 'react-router-dom'
 
 // @withRouter
 // @connect(state => ({
@@ -20,14 +20,13 @@ class Authenticated extends Component {
   }
 
   static defaultProps = {
-    adminOnly: false,
     children: null,
-    redirect: '/login',
+    redirect: '/admin/login',
   }
 
   isUserAuthed = () => (!!this.props.token)
 
-  renderRedirect = (pathname = '/login') => (
+  renderRedirect = (pathname = '/admin/login') => (
     <Redirect
       to={{
         pathname,

@@ -1,7 +1,7 @@
 import { logError } from '../utils/logUtils'
-import UserReducer from 'containers/User/reducer'
+// import UserReducer from 'containers/User/reducer'
 
-const LS_REDUX_KEY = 'hoopla::vendor::state'
+const LS_REDUX_KEY = 'app::redux::state'
 
 /**
  * Checks to see if localStorage is available in the global env
@@ -42,7 +42,7 @@ export const recoverReduxState = () => {
   const tokenExpire = recoveredState.user && recoveredState.user.tokenExpire
 
   if (tokenExpire < (new Date().getTime())) {
-    recoveredState.user = UserReducer(undefined, { type: undefined })
+    // recoveredState.user = UserReducer(undefined, { type: undefined })
   }
 
   return recoveredState

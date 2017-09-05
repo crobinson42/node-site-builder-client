@@ -1,8 +1,14 @@
 import {
+  CLEAR_TOKEN,
+  LOGOUT,
   SUBMIT_FORGOT_PASSWORD_FORM,
   SUBMIT_LOGIN_FORM,
   SUBMIT_RESET_PASS_FORM,
 } from './constants'
+
+export const clearToken = () => ({ type: CLEAR_TOKEN })
+
+export const logout = () => ({ type: LOGOUT })
 
 export const submitForgotPass = ({ email }) => ({
   type: SUBMIT_FORGOT_PASSWORD_FORM,

@@ -6,16 +6,16 @@ import React, { Component } from 'react'
 // @withRouter
 // @connect(state => ({}),
 //   {})
-class LoginContainer extends Component {
+class AuthContainer extends Component {
   static propTypes = {}
 
   // static defaultProps = {}
 
   render () {
     return (
-      <div>Login Container component</div>
+      <div>Auth Container component</div>
     )
   }
 }
 
-export default LoginContainer
+export default AuthContainer

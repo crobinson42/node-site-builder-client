@@ -4,7 +4,7 @@ import store from 'store'
 
 export const api = axios.create({
   // dev
-  baseURL: 'localhost:3030',
+  baseURL: process.env.REACT_APP_API_URL,
   // our backend expects this for data jenk instead of json
   // transformRequest: [qs.stringify],
 })
@@ -15,8 +15,8 @@ export const apiOptions = {
   interceptors: {
     request: [
       ({ getState }, config) => {
-        const { user } = store.getState()
-        const token = user.token
+        const { auth } = store.getState()
+        const token = auth.token
 
         if (token) {
           // eslint-disable-next-line

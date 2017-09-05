@@ -1,9 +1,8 @@
 import React from 'react'
-import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom'
+import { Router, Route, Switch } from 'react-router-dom'
 import createBrowserHistory from 'history/createBrowserHistory'
 
 import asyncComponent from '../components/AsyncComponent/index'
-
 import DashboardRoutes from './DashboardRoutes'
 
 const Login = asyncComponent(() => import('pages/Login'))
@@ -12,13 +11,13 @@ const Login = asyncComponent(() => import('pages/Login'))
 export const history = createBrowserHistory()
 
 export default () => (
-  <BrowserRouter history={history}>
+  <Router history={history}>
     <Switch>
-      <Route path="/dashboard">
+      <Route path="/admin/login" component={Login} />
+
+      <Route path="/admin">
         <DashboardRoutes />
       </Route>
-
-      <Route path="/login" component={Login} />
     </Switch>
-  </BrowserRouter>
+  </Router>
 )
