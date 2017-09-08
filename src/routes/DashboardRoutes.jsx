@@ -8,14 +8,24 @@ import DashboardPageWrapper from 'components/DashboardWrapper'
 
 const Dashboard = asyncComponent(() => import('pages/Dashboard'))
 
+// const DashboardRoutes = () => (
+//   <AuthenticatedRoutes>
+//     <DashboardPageWrapper>
+//       <Switch>
+//         <Route exact path="/admin/dashboard" component={Dashboard} />
+//       </Switch>
+//     </DashboardPageWrapper>
+//   </AuthenticatedRoutes>
+// )
+
+// todo: use above code once logic for auth is completed
+
 const DashboardRoutes = () => (
-  <AuthenticatedRoutes>
-    <DashboardPageWrapper>
-      <Switch>
-        <Route exact path="/admin/dashboard" component={Dashboard} />
-      </Switch>
-    </DashboardPageWrapper>
-  </AuthenticatedRoutes>
+  <DashboardPageWrapper>
+    <Switch>
+      <Route exact path="/admin/dashboard" component={Dashboard} />
+    </Switch>
+  </DashboardPageWrapper>
 )
 
 export default DashboardRoutes
